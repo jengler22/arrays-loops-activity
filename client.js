@@ -5,8 +5,13 @@
  * 2. Write a loop that logs out each hobby
  * 3. After the loop, log out the total number of
  *    hobbies
- */
-
+ */let hobbies = [ 'skiing', 'guitar', 'cook'];
+ let counter = 0;
+ for(let h in hobbies) {
+    console.log(hobbies[h]);
+    counter += 1;
+ }
+console.log('total hobbies', hobbies.length)
 
 // Example output
 // 1. swimming
@@ -24,7 +29,15 @@
  *    is in the array
  * 4. Output the array and number of times teal was found
  */
-
+let color = ['teal', 'blue', 'orange'];
+let  tealCount
+for(let teal in color) {
+    console.log('this is the test value',color[teal]);
+    if (color[teal] === teal) {
+        tealCount += 1;
+    }
+}
+console.log('this counts when teal is in loop', tealCount)
 
 // Example output
 // green, red, teal, orange, teal
@@ -40,6 +53,29 @@
  *    array and even numbers in the evenNumbers array.
  * 4. Output the original array, odd number array and even number array
  */
+let allNum = [1,2,5,7,10];
+///           0 1 2 3 4
+
+let oddNumbers = [];
+let evenNumbers = [];
+let c = 0
+
+for(let numbers in allNum){
+
+    console.log('1',numbers)
+    console.log('2',allNum)
+    console.log('3',allNum[numbers])
+
+    if(allNum[numbers] % 2 == 0){
+    evenNumbers.push(allNum[numbers])}
+    else {
+        oddNumbers.push(allNum[numbers])
+    }
+    c++
+}
+console.log('these are odd' ,oddNumbers)
+console.log('these are even' , evenNumbers)
+
 
 
 // Example output
